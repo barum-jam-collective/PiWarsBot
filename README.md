@@ -1,5 +1,8 @@
 # PiWarsBot
 
+![Build status](https://github.com/shymega/PiWarsBot/workflows/Rust/badge.svg)
+
+
 This is a Discord bot written in Rust for the Barum Jam Collective.
 
 Currently, its purpose is to extract tweets from Twitter matching a configured
