@@ -15,11 +15,7 @@ use futures::{executor, TryStreamExt};
 
 /// This function posts the supplied tweet struct to the Discord channel ID provided, using the
 /// Http context struct encapsulated in an `Arc<T>`.
-async fn post_to_channel(
-    channel_id: u64,
-    ctx: Arc<Http>,
-    tweet: Tweet,
-) {
+async fn post_to_channel(channel_id: u64, ctx: Arc<Http>, tweet: Tweet) {
     ChannelId(channel_id)
         .send_message(&ctx, |m| {
             m.embed(|e| {
