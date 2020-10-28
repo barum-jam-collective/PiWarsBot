@@ -1,6 +1,6 @@
 [package]
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
-default-run = "pwbot"
+default-run = "piwarsbot"
 description = "Pi Wars Discord bot for the Barum Jam"
 edition = "2018"
 homepage = "https://github.com/shymega/PiWarsBot"
@@ -14,10 +14,10 @@ repository = "https://github.com/shymega/PiWarsBot"
 version = "0.2.0"
 
 [[bin]]
-name = "pwbot"
+name = "piwarsbot"
 
 [lib]
-name = "pwbot"
+name = "piwarsbot"
 path = "src/lib.rs"
 
 [dependencies]

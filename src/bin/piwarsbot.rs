@@ -26,7 +26,7 @@ use serenity::{
 };
 use std::env::var;
 
-use pwbot::bot::handlers::ping::PING_COMMAND;
+use piwarsbot::bot::handlers::ping::PING_COMMAND;
 
 #[allow(missing_docs)]
 #[group]
