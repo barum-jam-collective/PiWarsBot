@@ -44,22 +44,22 @@ version = "0.9.0"
 
 [profile.dev]
 lto = true
-opt-level = 3
+opt-level = "z"
 codegen-units = 1
-debug = true
+debug = false
 
 [profile.dev.package."*"]
 codegen-units = 1
-opt-level = 3
-debug = true
+opt-level = "z"
+debug = false
 
 [profile.release]
 lto = true
-opt-level = 3
+opt-level = "z"
 codegen-units = 1
-debug = true
+debug = false
 
 [profile.release.package."*"]
 codegen-units = 1
-opt-level = 3
+opt-level = "z"
 debug = false
