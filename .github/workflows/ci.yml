@@ -27,7 +27,7 @@ jobs:
           args: --locked --all --release
 
       - name: Build PiWarsBot in debug mode
-        uses: action-rs/cargo@v1
+        uses: actions-rs/cargo@v1
         with:
           use-cross: true
           command: build
@@ -47,7 +47,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: target/release/piwarsbot
+          files: ./target/release/piwarsbot
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
