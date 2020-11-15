@@ -56,10 +56,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: piwarsbot-debug
-          path: |
-            ./target/debug/piwarsbot
-            ./.env.sample
-            ./README.md
+          path: ./target/debug/piwarsbot
 
       - name: Cache cargo
         uses: actions/cache@v2
