@@ -31,14 +31,12 @@ jobs:
           command: build
           args: --all
 
-      - name: 'Install (Cargo) binutils, if its release.'
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: 'Install (Cargo) binutils'
         run:
           cargo install cargo-binutils && rustup component add
           llvm-tools-preview
 
-      - name: Strip the PiWarsBot executable, if its a release
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Strip the PiWarsBot executable
         run: cargo-strip --release -- --strip-all
 
       - name: Create release for PiWarsBot, if its a release
