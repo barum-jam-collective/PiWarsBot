@@ -2,12 +2,10 @@
 
 ![Build status](https://github.com/shymega/PiWarsBot/workflows/Rust/badge.svg)
 
-
 This is a Discord bot written in Rust for the Barum Jam Collective.
 
-Currently, its purpose is to extract tweets from Twitter matching a configured
-hashtag, and post a short digest message in the Discord server every X amount of
-minutes/hours.
+Currently, its only purpose is to stream tweets with a configured hashtag
+into a Discord channel.
 
 ## Usage
 
