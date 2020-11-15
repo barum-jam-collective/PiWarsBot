@@ -45,7 +45,10 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: ./target/release/piwarsbot
+          files: |
+            ./target/release/piwarsbot
+            ./.env.sample
+            ./README.md
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
@@ -53,7 +56,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: piwarsbot-debug
-          path: ./target/debug/piwarsbot
+          path: |
+            ./target/debug/piwarsbot
+            ./.env.sample
+            ./README.md
 
       - name: Cache cargo
         uses: actions/cache@v2
